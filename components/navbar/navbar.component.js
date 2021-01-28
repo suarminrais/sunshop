@@ -1,29 +1,77 @@
-import React from 'react';
-import {NavbarContainer} from './navbar.styles';
+import React, {useState} from 'react';
+import {NavbarContainer,Halang,IconContainer, SideBar, Button} from './navbar.styles';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { 
+	faBars, 
+	faSearch,
+	faSignInAlt, 
+	faShoppingCart ,
+	faTimes
+} from '@fortawesome/free-solid-svg-icons'
+
 
 const Navbar =()=> {
+	const [sidebar, setSidebar] = useState({
+		transform:"translateX(-1000px)",
+		visibility:"hidden"
+	}); 
 
+	const handleClick =() =>{
+		if(sidebar.transform==="translateX(-1000px"){
+			setSidebar({
+				transform:"translateX(0)",
+				visibility:"visible"
+			});
+		}
+		else
+			setSidebar({transform:"translateX(-1000px",
+			visibility:"hidden"})
+	}
+
+	// style={{backgroundColor:"rgba(0,0,0,.5)"}}
 		return (
-			<NavbarContainer >
-				<div className='left_nav'>
-					<ul>
-						<li className='logo'><a href="">SUNSHOP</a></li>
-						<li className='items'>Watch Category</li>
-						<li>Apalagi</li>
-					</ul>
-					<div className="search">
-						<input type="text"/>
-						<button type='submit'>search</button>
+			<header>
+				<NavbarContainer>
+					<div className='left_nav'>
+						<IconContainer>
+							<FontAwesomeIcon icon={faBars} size="xs" onClick={()=>handleClick()}/>
+						</IconContainer>
+						<img src="/logo.png" alt="logo" className="logo"/>
 					</div>
-				</div>
-				<div>
-					<ul>
-						<li><a href="">Daftar</a></li>
+					<div className="right_nav">						
+							<IconContainer>
+								<FontAwesomeIcon className="iconFixed" icon={faSearch} size="xs"/>
+							</IconContainer>							
+							<IconContainer>
+								<FontAwesomeIcon className="iconFixed" icon={	faShoppingCart } size="xs"/>
+							</IconContainer>
+							<IconContainer>								
+								<FontAwesomeIcon className="iconFixed" icon={faSignInAlt} size="xs"/>
+							</IconContainer>
+					</div>
+				</NavbarContainer>
+				
+				<Halang style={{visibility:sidebar.visibility}}/>
 
-						<li><a href="">Login</a></li>
-					</ul>
-				</div>
-			</NavbarContainer>
+				<SideBar style={{ transform:sidebar.transform }}>
+					<div className="top">
+						<img src="/logo.png" alt="logo" className="logo"/>
+						<p>Download Aplikasinya</p>
+						<Button>
+							<a href="#" className="button">Install</a>
+						</Button>
+						<IconContainer>
+							<FontAwesomeIcon 
+								className="iconFixed" 
+								icon={faTimes}  
+								size="xs"
+								onClick={()=>handleClick()}
+								/>
+						</IconContainer>
+					</div>
+				</SideBar>	
+			</header>
+			
 		);
 }
 
