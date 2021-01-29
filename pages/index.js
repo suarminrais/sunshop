@@ -1,20 +1,88 @@
 import Head from 'next/head'
 import Navbar from '../components/navbar/navbar.component'
+import Footer from '../components/footer/footer.component'
 
 export default function Home() {
   return (
     <div >
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Sun Shop | </title>
+        <link rel="favicon" href=""/>
       </Head>
 
+      <Navbar/> 
+   
       <main >
-        <Navbar/>
       </main>
-
-      <footer >
-      </footer>
+           
+<div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+       <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div> <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div> 
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+      <div className='asu'>a</div>
+     <Footer/>
     </div>
   )
 }

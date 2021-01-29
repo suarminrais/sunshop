@@ -1,29 +1,72 @@
-import React from 'react';
-import {NavbarContainer} from './navbar.styles';
+import React, {useState} from 'react';
+import {
+	NavbarContainer, 
+	NavItems,
+	Logo,
+	Halang,
+	IconContainer, 
+	SidebarContainer, 
+	Button
+} from './navbar.styles';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { 
+	faBars, 
+	faSearch,
+	faSignInAlt, 
+	faShoppingCart ,
+	faTimes
+	} from '@fortawesome/free-solid-svg-icons'
+
 
 const Navbar =()=> {
+	const [sidebar, setSidebar] = useState(false); 
 
 		return (
-			<NavbarContainer >
-				<div className='left_nav'>
-					<ul>
-						<li className='logo'><a href="">SUNSHOP</a></li>
-						<li className='items'>Watch Category</li>
-						<li>Apalagi</li>
-					</ul>
-					<div className="search">
-						<input type="text"/>
-						<button type='submit'>search</button>
-					</div>
-				</div>
-				<div>
-					<ul>
-						<li><a href="">Daftar</a></li>
+			<header>
+				<NavbarContainer>
+					<NavItems >
+						<IconContainer>
+							<FontAwesomeIcon 
+								icon={faBars}
+								size="xs"
+								onClick={()=>setSidebar(!sidebar)}
+								/>
+						</IconContainer>
+						<Logo src="/logo.png" alt="logo"/>
+					</NavItems>
+					<NavItems right>						
+							<IconContainer>
+								<FontAwesomeIcon icon={faSearch} size="xs"/>
+							</IconContainer>							
+							<IconContainer>	
+								<FontAwesomeIcon icon={	faShoppingCart } size="xs"/>
+							</IconContainer>
+							<IconContainer>								
+								<FontAwesomeIcon icon={faSignInAlt} size="xs"/>
+							</IconContainer>
+					</NavItems>
+				</NavbarContainer>
+				
+			<Halang display={sidebar ? 1: 0}/>
 
-						<li><a href="">Login</a></li>
-					</ul>
-				</div>
-			</NavbarContainer>
+				<SidebarContainer display={sidebar ? 1 : 0}>
+					<NavbarContainer sidebarStyle>
+						<Logo src="/logo.png" alt="logo"/>
+						<p>Download Aplikasinya</p>
+						<Button>
+							<a href="#" className="button">Install</a>
+						</Button>
+						<IconContainer>
+							<FontAwesomeIcon 
+								icon={faTimes}  
+								size="xs"
+								onClick={()=>setSidebar(!sidebar)}
+								/>
+						</IconContainer>
+					</NavbarContainer>
+				</SidebarContainer>	
+			</header>
+			
 		);
 }
 
