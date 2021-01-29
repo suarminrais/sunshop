@@ -1,5 +1,13 @@
 import React, {useState} from 'react';
-import {NavbarContainer,Halang,IconContainer, SideBar, Button} from './navbar.styles';
+import {
+	NavbarContainer, 
+	NavItems,
+	Logo,
+	Halang,
+	IconContainer, 
+	SidebarContainer, 
+	Button
+} from './navbar.styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
 	faBars, 
@@ -7,69 +15,56 @@ import {
 	faSignInAlt, 
 	faShoppingCart ,
 	faTimes
-} from '@fortawesome/free-solid-svg-icons'
+	} from '@fortawesome/free-solid-svg-icons'
 
 
 const Navbar =()=> {
-	const [sidebar, setSidebar] = useState({
-		transform:"translateX(-1000px)",
-		visibility:"hidden"
-	}); 
+	const [sidebar, setSidebar] = useState(false); 
 
-	const handleClick =() =>{
-		if(sidebar.transform==="translateX(-1000px"){
-			setSidebar({
-				transform:"translateX(0)",
-				visibility:"visible"
-			});
-		}
-		else
-			setSidebar({transform:"translateX(-1000px",
-			visibility:"hidden"})
-	}
-
-	// style={{backgroundColor:"rgba(0,0,0,.5)"}}
 		return (
 			<header>
 				<NavbarContainer>
-					<div className='left_nav'>
+					<NavItems >
 						<IconContainer>
-							<FontAwesomeIcon icon={faBars} size="xs" onClick={()=>handleClick()}/>
+							<FontAwesomeIcon 
+								icon={faBars}
+								size="xs"
+								onClick={()=>setSidebar(!sidebar)}
+								/>
 						</IconContainer>
-						<img src="/logo.png" alt="logo" className="logo"/>
-					</div>
-					<div className="right_nav">						
+						<Logo src="/logo.png" alt="logo"/>
+					</NavItems>
+					<NavItems right>						
 							<IconContainer>
-								<FontAwesomeIcon className="iconFixed" icon={faSearch} size="xs"/>
+								<FontAwesomeIcon icon={faSearch} size="xs"/>
 							</IconContainer>							
-							<IconContainer>
-								<FontAwesomeIcon className="iconFixed" icon={	faShoppingCart } size="xs"/>
+							<IconContainer>	
+								<FontAwesomeIcon icon={	faShoppingCart } size="xs"/>
 							</IconContainer>
 							<IconContainer>								
-								<FontAwesomeIcon className="iconFixed" icon={faSignInAlt} size="xs"/>
+								<FontAwesomeIcon icon={faSignInAlt} size="xs"/>
 							</IconContainer>
-					</div>
+					</NavItems>
 				</NavbarContainer>
 				
-				<Halang style={{visibility:sidebar.visibility}}/>
+			<Halang display={sidebar ? 1: 0}/>
 
-				<SideBar style={{ transform:sidebar.transform }}>
-					<div className="top">
-						<img src="/logo.png" alt="logo" className="logo"/>
+				<SidebarContainer display={sidebar ? 1 : 0}>
+					<NavbarContainer sidebarStyle>
+						<Logo src="/logo.png" alt="logo"/>
 						<p>Download Aplikasinya</p>
 						<Button>
 							<a href="#" className="button">Install</a>
 						</Button>
 						<IconContainer>
 							<FontAwesomeIcon 
-								className="iconFixed" 
 								icon={faTimes}  
 								size="xs"
-								onClick={()=>handleClick()}
+								onClick={()=>setSidebar(!sidebar)}
 								/>
 						</IconContainer>
-					</div>
-				</SideBar>	
+					</NavbarContainer>
+				</SidebarContainer>	
 			</header>
 			
 		);
