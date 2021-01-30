@@ -1,9 +1,28 @@
- import {FooterContainer, FooterItem, AppButton} from './footer.styles';
+ import {FooterContainer, FooterItem, AppDownload} from './footer.styles';
 
  const Footer =()=> {
  	return(
  			<FooterContainer>
- 				<FooterItem className='faq'>
+			 <FooterItem>
+				 <h6>Download Aplikasinya</h6>
+				 <AppDownload href="#">
+					 <img src="/playstore.png" alt=""/>
+				 </AppDownload>
+				 <AppDownload href="#" right>
+					 <img src="appstore.png" alt=""/>
+				 </AppDownload>
+			 </FooterItem>
+			 <FooterItem gray>
+			 	<div>
+				 <p>Copyright 2021 . Sunshop . </p>
+				</div>
+				 <div>
+					 <a href="">Peta Situs</a>
+					 <a href="">Blog</a>
+					 <a href="">Liputan 6</a>
+				 </div>
+			 </FooterItem>
+ 				{/* <FooterItem className='faq'>
  					<p><a href="">Bantuan</a></p>
  					<p><a href="">FAQ(Tanya Jawab)</a></p>
  					<p><a href="">Panduan Belanja</a></p>
@@ -39,7 +58,7 @@
 						 <AppButton className="playstore">aaa</AppButton>
 					</a>				
 						 <AppButton href=""></AppButton>
-				</FooterItem>
+				</FooterItem> */}
  			</FooterContainer>
  		);
 }

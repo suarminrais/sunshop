@@ -6,7 +6,10 @@ import {
 	Halang,
 	IconContainer, 
 	SidebarContainer, 
-	Button
+	DekstopNav,
+	Button,
+	SearchContainer,
+	SearchInput,
 } from './navbar.styles';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
@@ -65,6 +68,26 @@ const Navbar =()=> {
 						</IconContainer>
 					</NavbarContainer>
 				</SidebarContainer>	
+				<DekstopNav>
+					<NavItems desktop>
+						<Logo src="/logo.png" alt="logo"/>
+						<a href="#">Categories</a>
+						<a href="#">Collections</a>
+						<a href="#">Sales</a>
+						<SearchContainer htmlFor="search">
+							<SearchInput 
+								id="search"
+								type="text"
+								placeholder="Search"
+								/>
+							<button type="submit" style={{display:"none"}}></button>
+						</SearchContainer>
+					</NavItems>
+					<NavItems around>
+						<a href="#">Login</a>
+						<a href="#">Daftar</a>
+					</NavItems>
+				</DekstopNav>
 			</header>
 			
 		);
