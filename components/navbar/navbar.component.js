@@ -19,7 +19,7 @@ import {
 	faShoppingCart ,
 	faTimes
 	} from '@fortawesome/free-solid-svg-icons'
-
+import SidebarItems from './sidebarItems.component'
 
 const Navbar =()=> {
 	const [sidebar, setSidebar] = useState(false); 
@@ -67,6 +67,14 @@ const Navbar =()=> {
 								/>
 						</IconContainer>
 					</NavbarContainer>
+					<div style={{position:"relative",top:"60px",width:"90%" ,margin:"0 auto"}}>
+						<SidebarItems icon={faShoppingCart} text="Shopping Bitch" more/>
+						<SidebarItems icon={faShoppingCart} text="Shopping Bitch"/>
+						<SidebarItems icon={faShoppingCart} text="Shopping Bitch"/>
+						<SidebarItems icon={faShoppingCart} text="Shopping Bitch"/>
+						<SidebarItems icon={faShoppingCart} text="Shopping Bitch"/>
+						<SidebarItems icon={faShoppingCart} text="Shopping Bitch" more/>
+					</div>
 				</SidebarContainer>	
 				<DekstopNav>
 					<NavItems desktop>
