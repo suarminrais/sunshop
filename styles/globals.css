@@ -1,7 +1,3 @@
-:root{
-  --asu:9;
-}
-
 html,
 body {
   padding: 0;
@@ -19,4 +15,8 @@ li{
 
 * {
   box-sizing: border-box;
+}
+
+img{
+  width: 100%;
 }
