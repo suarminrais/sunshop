@@ -20,20 +20,22 @@ export const Logo = styled.div`
 export const NavItems = styled.ul`
   display:flex;
   align-items:center;
-  li{
-    margin:0 .5rem;
-    }
+  
   @media screen and (max-width:868px){
     flex-direction:column;
   }
 `
+export const NavItem = styled.li`
+  margin:0 .5rem;
+
+`
 
 export const DropDown = styled.div`
   position:relative;
- display:flex;
- justify-content:space-between;
- align-items:center;
- cursor: pointer;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  cursor: pointer;
 
  @media screen and (max-width:868px){
   width: 70vw;
