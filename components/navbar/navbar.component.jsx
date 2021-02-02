@@ -4,6 +4,7 @@ import { Nav,
   Logo,
   Responsive, 
   NavItems, 
+  NavItem,
   DropDown,
   Shadow, 
   IconWrapper,
@@ -43,7 +44,7 @@ console.log("1 :"+open.kategori)
         <Shadow open={open.sidebar}/>
         <Responsive open={open.sidebar}>
           <NavItems>
-            <li>
+            <NavItem>
               <DropDown onClick={()=>setDropdown({bestSellers:!dropdown.bestSellers})}>
                 Best Sellers
                 <IconWrapper dropDown>
@@ -58,8 +59,8 @@ console.log("1 :"+open.kategori)
                     <p>Item</p>
                     <p>Item</p>
               </DropDownMenu>
-            </li>
-            <li>
+            </NavItem>
+            <NavItem>
               <DropDown onClick={()=>setDropdown({kategori:!dropdown.kategori})}>
                 Kategori
                 <IconWrapper dropDown>
@@ -73,18 +74,18 @@ console.log("1 :"+open.kategori)
                   <p>Item</p>
                   <p>Item</p>
                 </DropDownMenu>
-            </li>
-            <li>
+            </NavItem>
+            <NavItem>
               <input type="text"/>
-            </li>
+            </NavItem>
           </NavItems>
           <NavItems>
-            <li>
+            <NavItem>
               <Link href="">Login</Link>
-            </li>
-            <li>
+            </NavItem>
+            <NavItem>
               <Link href="">Daftar</Link>
-            </li>
+            </NavItem>
           </NavItems>
         </Responsive>
       </Nav>      
