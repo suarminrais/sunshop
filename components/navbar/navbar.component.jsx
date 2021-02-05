@@ -28,8 +28,6 @@ function Navbar() {
     bestSellers:false,
     kategori:false
   })
-console.log("1 :"+open.bestSellers)
-console.log("1 :"+open.kategori)
 
   return (
     <>
@@ -76,15 +74,19 @@ console.log("1 :"+open.kategori)
                 </DropDownMenu>
             </NavItem>
             <NavItem>
-              <input type="text"/>
+              <Responsive type="text" />
             </NavItem>
           </NavItems>
           <NavItems>
             <NavItem>
-              <Link href="">Login</Link>
+              <DropDown>
+                <Link href="">Login</Link>
+              </DropDown>
             </NavItem>
             <NavItem>
-              <Link href="">Daftar</Link>
+              <DropDown>
+                <Link href="">Daftar</Link>
+              </DropDown>
             </NavItem>
           </NavItems>
         </Responsive>

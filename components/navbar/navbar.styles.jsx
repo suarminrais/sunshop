@@ -39,6 +39,8 @@ export const DropDown = styled.div`
 
  @media screen and (max-width:868px){
   width: 70vw;
+  font-size: 1rem;
+  margin: 1rem 0;
  }
 `
 
@@ -113,10 +115,10 @@ export const Shadow = styled.div`
   transform:translateX(-1000px); 
   transition:all 0.5s;
   @media screen and (min-width:100px){
-    opacity:0;
+    display:none;
   }
   @media screen and (max-width:868px){
-    ${({open})=> open?"opacity:1;transform:translateX(0)":"transform:translateX(-1000px)"}
+    ${({open})=> open?"display:block;transform:translateX(0)":"transform:translateX(-1000px)"}
   }
 
 `
