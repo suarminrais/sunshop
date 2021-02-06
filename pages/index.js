@@ -14,16 +14,6 @@ export default function Home() {
       </Head>
       <Navbar/>
       <Products />
-      <div>cok</div>
-      <div>cok</div>
-      <div>cok</div>
-      <div>cok</div>
-      <div>cok</div>
-      <div>cok</div>
-      <div>cok</div>
-      <div>cok</div>
-      <div>cok</div>
-      <div>cok</div>
       <Footer />
     </>
   )

@@ -85,12 +85,11 @@ export const Responsive = styled.div`
   }
 `
 
-/*3 kinds : burger(only mobile) , nav(always appear)*/
 export const IconWrapper = styled.div`
-${({dropDown})=>dropDown?"width: 12px;":"width:22px;"}  
+${({smaller})=>smaller?"width: 12px;":"width:22px;"}  
+${({flex})=>flex?"display: flex;":""}  
   margin-left:.5rem;
-  @media screen and (max-width:868px){
-    
+  @media screen and (max-width:868px){    
     display:block;
     cursor:pointer;
     ${({open}) => open && css`
@@ -103,6 +102,8 @@ ${({dropDown})=>dropDown?"width: 12px;":"width:22px;"}
   ${({mobileOnly}) => mobileOnly && css`
     display:none;
   `}
+  ${({star})=> star?"width: 92px;":""}
+  ${({noMargin})=> noMargin?"margin:0;":""}
 `
 
 export const Shadow = styled.div`

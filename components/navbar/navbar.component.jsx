@@ -45,7 +45,7 @@ function Navbar() {
             <NavItem>
               <DropDown onClick={()=>setDropdown({bestSellers:!dropdown.bestSellers})}>
                 Best Sellers
-                <IconWrapper dropDown>
+                <IconWrapper smaller>
                   <FontAwesomeIcon 
                   icon={dropdown.bestSellers?faChevronUp:faChevronDown} 
                   />                
@@ -61,7 +61,7 @@ function Navbar() {
             <NavItem>
               <DropDown onClick={()=>setDropdown({kategori:!dropdown.kategori})}>
                 Kategori
-                <IconWrapper dropDown>
+                <IconWrapper smaller>
                   <FontAwesomeIcon 
                   icon={dropdown.kategori?faChevronUp:faChevronDown} 
                   />                 

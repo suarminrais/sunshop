@@ -38,6 +38,30 @@ function Products() {
           rating = "5"
           addition = "Casback"
         />
+         <Card 
+          title = "Alat Bantu Hidup"
+          img = "/product/product1.jpg"
+          price = "120.900.10"
+          loc = "Jakarta"
+          rating = "5"
+          addition = "Casback"
+        />
+         <Card 
+          title = "Alat Bantu Hidup"
+          img = "/product/product1.jpg"
+          price = "120.900.10"
+          loc = "Jakarta"
+          rating = "5"
+          addition = "Casback"
+        />
+         <Card 
+          title = "Alat Bantu Hidup"
+          img = "/product/product1.jpg"
+          price = "120.900.10"
+          loc = "Jakarta"
+          rating = "5"
+          addition = "Casback"
+        />
       </Container>
     </>
   )
