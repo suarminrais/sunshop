@@ -98,6 +98,10 @@ ${({flex})=>flex?"display: flex;":""}
     transition: all 0.5s;
     z-index: 3;
     `}
+    ${({star})=> star && css`
+    width: 92px;
+    display:flex;
+    `}
     }
   ${({mobileOnly}) => mobileOnly && css`
     display:none;

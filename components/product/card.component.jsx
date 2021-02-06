@@ -9,7 +9,7 @@ const Card =({img, title, price, loc, rating, addition}) => {
   const Rating = ()=>{
     for(let i = 0; i < rating; i++){
       Ratings.push(       
-          <FontAwesomeIcon icon={faStar} color="orange"/>
+          <FontAwesomeIcon key={rating} icon={faStar} color="orange"/>
         )      
       }
   };
