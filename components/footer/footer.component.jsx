@@ -1,4 +1,13 @@
-import {FooterContainer, FooterItems,FooterItem, AppDownload, DownloadTitle, LinkStyle, CopyRight} from './footer.styles';
+import Image from 'next/image'
+import {
+  FooterContainer, 
+  FooterItems,
+  FooterItem, 
+  AppDownload, 
+  DownloadTitle,
+  LinkStyle,
+  CopyRight
+} from './footer.styles';
 
 const Footer =()=> {
  
@@ -40,10 +49,10 @@ const Footer =()=> {
         <FooterItems onmobile>
           <DownloadTitle >Download Aplikasinya</DownloadTitle>
           <AppDownload href="#">
-            <img src="/playstore.png" alt=""/>
+            <Image src="/playstore.png" alt=""  width={200} height={70}/>
           </AppDownload>
           <AppDownload href="#" right>
-            <img src="appstore.png" alt=""/>
+            <Image src="/appstore.png" alt="" width={200} height={70}/>
           </AppDownload>
         </FooterItems>
       </FooterContainer>

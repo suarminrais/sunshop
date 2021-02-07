@@ -20,6 +20,7 @@ export const Logo = styled.div`
 export const NavItems = styled.ul`
   display:flex;
   align-items:center;
+  padding-left: 2rem;
   
   @media screen and (max-width:868px){
     flex-direction:column;

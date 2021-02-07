@@ -1,8 +1,17 @@
 import React from 'react';
 import {IconWrapper} from '../navbar/navbar.styles'
+import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar	} from '@fortawesome/free-solid-svg-icons'
-import { Addition, CardWrapper,CardDesc, CardTitle, LocalStore, Price,RateCount} from './product.styles';
+import { 
+  Addition,
+  CardWrapper,
+  CardDesc, 
+  CardTitle, 
+  LocalStore, 
+  Price,
+  RateCount
+} from './product.styles';
 
 const Card =({img, title, price, loc, rating, addition}) => {
   let Ratings = [];
@@ -18,7 +27,7 @@ const Card =({img, title, price, loc, rating, addition}) => {
   return (
     <>
       <CardWrapper>
-        <img src={img} alt=""/>
+        <Image src={img} alt={img} width="100%" height="auto"/>
         {addition && <Addition>{addition}</Addition>}
         <CardDesc>
           <CardTitle>{title}</CardTitle>
