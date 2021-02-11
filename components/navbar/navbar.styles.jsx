@@ -16,6 +16,7 @@ export const Nav = styled.nav`
 export const Logo = styled.div`
   font-weight:bold;
   text-transform:uppercase;
+  cursor: pointer;
 `
 export const NavItems = styled.ul`
   display:flex;
@@ -51,6 +52,7 @@ export const DropDownMenu = styled.div`
   flex-direction:column;
   color:black;
   background-color:blue;
+  top:4rem;
 
   @media screen and (max-width:868px){
     position: relative;

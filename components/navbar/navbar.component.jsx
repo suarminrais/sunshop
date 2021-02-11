@@ -35,7 +35,9 @@ function Navbar() {
         <IconWrapper mobileOnly onClick={()=>setOpen({sidebar:!open.sidebar})} open={open.sidebar}>
           <FontAwesomeIcon icon={open.sidebar?faTimes:faBars} />
         </IconWrapper>
-        <Logo>sunshop</Logo>
+        <Link href="/">
+          <Logo>sunshop</Logo>
+        </Link>
         <IconWrapper mobileOnly as='a' href='#'>  
           <FontAwesomeIcon icon={faShoppingCart} />
         </IconWrapper>
