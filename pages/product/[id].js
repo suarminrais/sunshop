@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Head from 'next/head';
 import Navbar from '../../components/navbar/navbar.component';
 import Footer from '../../components/footer/footer.component';
+import ProductDetail from '../../components/product/product-detail.component';
 
 function Product() {
   const ProductData = [
@@ -45,12 +46,7 @@ function Product() {
         <link rel="favicon" href=""/>
       </Head>
        <Navbar/>
-       <div style={{padding:"5rem 30rem"}}>
-          <div style={{maxWidth:"500px",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
-            <h1 style={{textAlign:"center"}}>{ProductData[id].title}</h1>
-            <Image src={ProductData[id].img} width="100%" height="auto"/>
-          </div>
-       </div>
+      <ProductDetail result={ProductData[id]}></ProductDetail>
       <Footer />
     </>
   )

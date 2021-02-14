@@ -1,13 +1,16 @@
-import React from 'react'
-import {ProductData} from './product.component'
+import React, { useContext } from 'react'
+import {productsContext} from '../../pages/_app'
+import { GridContainer } from './product.styles';
 
+function ProductDetail({result}) {
+  const products = useContext(productsContext);
 
-function ProductDetail() {
-  const data = ProductData;
+  const data = result;
+  console.log(data)
   return (
-    <div>
-      
-    </div>
+    <>
+      <GridContainer></GridContainer>
+    </>
   )
 }
 

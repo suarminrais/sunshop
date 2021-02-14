@@ -57,3 +57,7 @@ export const Price = styled.p`
   font-weight:bold;
   color:orange;
 `
+export const GridContainer = styled.div`
+  display:grid;
+  padding-top:5rem;
+`
