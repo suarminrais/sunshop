@@ -1,14 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Card from './card.component'
 import { Container } from './product.styles'
 import {useDataProducts} from '../context/product/product.context'
 
 function Products() {
-  const products = useDataProducts();
+  const products = useDataProducts;
   return (
     <>
       <Container>
-      {products.map((item,i) => {
+        {products.map((item,i) => {
           return <Card
             id = {i}
             title={item.title}
@@ -19,8 +19,9 @@ function Products() {
             addition = {item.addition}
             link ={item.link}
             key ={item.title}
-          />})
-          }
+          />}
+        )
+        }
       </Container>
     </>
   )

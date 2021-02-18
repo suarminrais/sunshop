@@ -16,11 +16,13 @@ export const Nav = styled.nav`
 export const Logo = styled.div`
   font-weight:bold;
   text-transform:uppercase;
+  cursor: pointer;
 `
 export const NavItems = styled.ul`
   display:flex;
   align-items:center;
   padding-left: 2rem;
+  top:4rem;
   
   @media screen and (max-width:868px){
     flex-direction:column;
